@@ -18,19 +18,31 @@ navigator.geolocation.getCurrentPosition(
     console.log(longitude, latitude);
     const googleMapsUrl = `https://www.google.com/maps/@${latitude},${longitude}z`;
     console.log(googleMapsUrl);
-    const map = L.map('map').setView([latitude, longitude], 13);
-
-    console.log(L);
+    const coords = [latitude, longitude];
+    const map = L.map('map').setView(coords, 13);
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution:
         '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(map);
 
-    L.marker([latitude, longitude])
-      .addTo(map)
-      .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-      .openPopup();
+    map.on('click', function (mapEvent) {
+      console.log(mapEvent);
+      const { lat, lng } = mapEvent.latlng;
+
+      L.marker([lat, lng])
+        .addTo(map)
+        .bindPopup(
+          L.popup({
+            minWidth: 100,
+            maxWidth: 250,
+            autoClose: false,
+            closeOnClick: false,
+            className: 'running-popup',
+          })
+        )
+        .openPopup();
+    });
   },
   () => {
     alert('could not get your position');
