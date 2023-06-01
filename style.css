@@ -221,3 +221,81 @@ a:visited {
 .cycling-popup .leaflet-popup-content-wrapper {
     border-left: 5px solid var(--color-brand--1);
 }
+
+.side__bar--btn {
+    display: none;
+}
+
+
+@media only screen and (max-width: 767px) {
+    body {
+        padding: 0.2rem;
+    }
+
+    .sidebar--hidden {
+        margin-right: -75vw;
+    }
+
+    .sidebar {
+        flex-basis: 80vw;
+        background-color: var(--color-dark--1);
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .side__bar--btn {
+        display: block;
+        align-self: self-end;
+        height: 4rem;
+        margin: 1rem;
+        background-color: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .side__bar--icon {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .rotated__icon {
+        transform: rotate(180deg);
+    }
+
+    .btn__text {
+        color: #fff;
+        height: 1.2rem;
+    }
+
+    .form {
+        height: 14.25rem;
+    }
+
+    .form__btn {
+        display: block;
+        border: solid 2px #fff;
+        color: #fff;
+        width: 100%;
+        height: 3rem;
+        border-radius: 3px;
+    }
+
+    .form__btn--highlighted {
+        background-color: var(--color-brand--2);
+    }
+
+    .form__btn--unhighlighted {
+        background-color: var(--color-dark--1);
+    }
+
+    .btn__text--highlight {
+        color: var(--color-brand--1);
+    }
+
+    .btn__text--unhighlight {
+        color: var(--color-brand--2);
+    }
+}

@@ -23,7 +23,14 @@
 <body>
   <div class="sidebar">
     <img src="logo.png" alt="Logo" class="logo" />
-
+    <button class="side__bar--btn">
+      <p class="btn__text btn__text--highlight">show list</p>
+      <img src="next.png" alt="show" class="side__bar--icon">
+    </button>
+    <button class="side__bar--btn">
+      <p class="btn__text btn__text--unhighlight">hidde list</p>
+      <img src="next.png" alt="hide" class="side__bar--icon rotated__icon">
+    </button>
     <ul class="workouts">
       <form class="form hidden">
         <div class="form__row">
@@ -35,21 +42,22 @@
         </div>
         <div class="form__row">
           <label class="form__label">Distance</label>
-          <input class="form__input form__input--distance" placeholder="km" />
+          <input class="form__input form__input--distance" placeholder="km" required />
         </div>
         <div class="form__row">
           <label class="form__label">Duration</label>
-          <input class="form__input form__input--duration" placeholder="min" />
+          <input class="form__input form__input--duration" placeholder="min" required />
         </div>
         <div class="form__row">
           <label class="form__label">Cadence</label>
-          <input class="form__input form__input--cadence" placeholder="step/min" />
+          <input class="form__input form__input--cadence" placeholder="step/min" required />
         </div>
         <div class="form__row form__row--hidden">
           <label class="form__label">Elev Gain</label>
-          <input class="form__input form__input--elevation" placeholder="meters" />
+          <input class="form__input form__input--elevation" placeholder="meters" required />
         </div>
-        <button class="form__btn">OK</button>
+        <button class="form__btn form__btn--unhighlighted">DISCARD</button>
+        <button class="form__btn form__btn--highlighted add__workout--btn">ADD</button>
       </form>
 
       <!-- <li class="workout workout--running" data-id="1234567890">
