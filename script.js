@@ -103,7 +103,6 @@ class App {
     sidebar.classList.remove('sidebar--hidden');
     showSidebarBtn.classList.add('btn__hidden');
     hideSidebarBtn.classList.remove('btn__hidden');
-    form.classList.remove('hidden');
   }
 
   _hideSidebar() {
