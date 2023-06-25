@@ -72,6 +72,8 @@ class App {
     inputType.addEventListener('change', this._toggleELevationField);
     containerWorkouts.addEventListener('click', this._moveToPopup.bind(this));
     this._getLocalStorage();
+    showSidebarBtn.addEventListener('click', this._showSidebar.bind(this));
+    hideSidebarBtn.addEventListener('click', this._hideSidebar.bind(this));
   }
 
   _getPostion() {
@@ -99,17 +101,20 @@ class App {
 
   _showSidebar() {
     sidebar.classList.remove('sidebar--hidden');
-    showSidebarBtn.style.display = 'hidden';
-    hideSidebarBtn.style.display = 'block';
+    showSidebarBtn.classList.add('btn__hidden');
+    hideSidebarBtn.classList.remove('btn__hidden');
+    form.classList.remove('hidden');
   }
 
   _hideSidebar() {
-    sidebar.classList.remove('sidebar--hidden');
-    showSidebarBtn.style.display = 'block';
-    hideSidebarBtn.style.display = 'hidden';
+    sidebar.classList.add('sidebar--hidden');
+    showSidebarBtn.classList.remove('btn__hidden');
+    hideSidebarBtn.classList.add('btn__hidden');
+    form.classList.add('hidden');
   }
 
   _showForm(mapE) {
+    this._showSidebar();
     this.#mapEvent = mapE;
     form.classList.remove('hidden');
     inputDistance.focus();
