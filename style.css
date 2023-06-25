@@ -42,7 +42,7 @@ a:visited {
 
 /* SIDEBAR */
 .sidebar {
-    flex-basis: 50rem;
+    width: 50rem;
     background-color: var(--color-dark--1);
     padding: 3rem 5rem 4rem 5rem;
     display: flex;
@@ -232,16 +232,17 @@ a:visited {
         padding: 0.2rem;
     }
 
-    .sidebar--hidden {
-        margin-right: -75vw;
-    }
-
     .sidebar {
-        flex-basis: 80vw;
+        width: 80vw;
         background-color: var(--color-dark--1);
         padding: 2.5rem;
         display: flex;
         flex-direction: column;
+        transition: width 1s ease-in-out;
+    }
+
+    .sidebar--hidden {
+        width: 20rem;
     }
 
     .side__bar--btn {
@@ -254,6 +255,11 @@ a:visited {
         display: flex;
         align-items: center;
         gap: 1.5rem;
+    }
+
+
+    .btn__hidden {
+        display: none;
     }
 
     .side__bar--icon {

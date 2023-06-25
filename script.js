@@ -8,6 +8,9 @@ const inputDuration = document.querySelector('.form__input--duration');
 const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
 const newWorkoutBtn = document.querySelector('.add__workout--btn');
+const showSidebarBtn = document.querySelector('.show-sidebar__btn');
+const hideSidebarBtn = document.querySelector('.hide-sidebar__btn');
+const sidebar = document.querySelector('.sidebar');
 
 class Workout {
   date = new Date();
@@ -94,6 +97,18 @@ class App {
     });
   }
 
+  _showSidebar() {
+    sidebar.classList.remove('sidebar--hidden');
+    showSidebarBtn.style.display = 'hidden';
+    hideSidebarBtn.style.display = 'block';
+  }
+
+  _hideSidebar() {
+    sidebar.classList.remove('sidebar--hidden');
+    showSidebarBtn.style.display = 'block';
+    hideSidebarBtn.style.display = 'hidden';
+  }
+
   _showForm(mapE) {
     this.#mapEvent = mapE;
     form.classList.remove('hidden');
@@ -124,7 +139,6 @@ class App {
     const duration = +inputDuration.value;
     const { lat, lng } = this.#mapEvent.latlng;
     let workout;
-
     const validInput = (...inputs) =>
       inputs.every(input => Number.isFinite(input));
     const allPositives = (...inputs) => inputs.every(inp => inp >= 0);

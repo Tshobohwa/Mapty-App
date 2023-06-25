@@ -21,13 +21,13 @@
 </head>
 
 <body>
-  <div class="sidebar">
+  <div class="sidebar sidebar--hidden">
     <img src="logo.png" alt="Logo" class="logo" />
-    <button class="side__bar--btn">
+    <button class="side__bar--btn show-sidebar__btn">
       <p class="btn__text btn__text--highlight">show list</p>
       <img src="next.png" alt="show" class="side__bar--icon">
     </button>
-    <button class="side__bar--btn">
+    <button class="side__bar--btn hide-sidebar__btn btn__hidden">
       <p class="btn__text btn__text--unhighlight">hidde list</p>
       <img src="next.png" alt="hide" class="side__bar--icon rotated__icon">
     </button>
@@ -57,16 +57,16 @@
           <input class="form__input form__input--elevation" placeholder="meters" required />
         </div>
         <button class="form__btn form__btn--unhighlighted">DISCARD</button>
-        <button class="form__btn form__btn--highlighted add__workout--btn">ADD</button>
+        <button class="form__btn form__btn--highlighted add__workout--btn" type="submit">ADD</button>
       </form>
     </ul>
 
-    <p class="copyright">
+    <!-- <p class="copyright">
       &copy; Copyright by
       <a class="twitter-link" target="_blank" href="https://twitter.com/jonasschmedtman">Jonas Schmedtmann</a>.
       Use for learning or your portfolio. Don't use to teach. Don't claim
       as your own.
-    </p>
+    </p> -->
   </div>
 
   <div id="map"></div>
