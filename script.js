@@ -261,6 +261,7 @@ class App {
     const workout = this.#workouts.find(
       workout => workout.id === workoutEl.dataset.id
     );
+    this._hideSidebar();
     this.#map.setView(workout.coords, this.#mapZoomLevel, {
       animate: true,
       pan: {

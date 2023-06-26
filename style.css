@@ -241,6 +241,11 @@ a:visited {
         transition: width 1s ease-in-out;
     }
 
+    .form {
+        grid-template-columns: 1fr;
+        height: 13.5rem;
+    }
+
     .sidebar--hidden {
         width: 20rem;
     }
