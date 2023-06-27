@@ -126,7 +126,7 @@ a:visited {
     gap: 0.5rem 2.5rem;
 
     /* Match height and activity boxes */
-    height: 9.25rem;
+    height: 12.25rem;
     transition: all 0.5s, transform 1ms;
 }
 
@@ -294,7 +294,7 @@ a:visited {
     }
 
     .form {
-        height: 14.25rem;
+        height: 22.25rem;
     }
 
     .btn__text--highlight {
