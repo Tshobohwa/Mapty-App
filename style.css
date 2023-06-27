@@ -170,7 +170,19 @@ a:visited {
 }
 
 .form__btn {
-    display: none;
+    border: solid 2px #fff;
+    color: #fff;
+    width: 100%;
+    height: 3rem;
+    border-radius: 3px;
+}
+
+.form__btn--highlighted {
+    background-color: var(--color-brand--2);
+}
+
+.form__btn--unhighlighted {
+    background-color: var(--color-dark--1);
 }
 
 .copyright {
@@ -283,23 +295,6 @@ a:visited {
 
     .form {
         height: 14.25rem;
-    }
-
-    .form__btn {
-        display: block;
-        border: solid 2px #fff;
-        color: #fff;
-        width: 100%;
-        height: 3rem;
-        border-radius: 3px;
-    }
-
-    .form__btn--highlighted {
-        background-color: var(--color-brand--2);
-    }
-
-    .form__btn--unhighlighted {
-        background-color: var(--color-dark--1);
     }
 
     .btn__text--highlight {
