@@ -251,6 +251,7 @@ a:visited {
         top: 1rem;
         left: 50vw;
         transform: translateX(-50%);
+        z-index: 100;
     }
 
     .sidebar {
@@ -309,6 +310,10 @@ a:visited {
 
     .workouts--hidden {
         opacity: 0;
+    }
+
+    .workout {
+        grid-template-columns: 1fr 1fr;
     }
 
     .btn__text--highlight {
