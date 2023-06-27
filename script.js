@@ -103,6 +103,7 @@ class App {
     sidebar.classList.remove('sidebar--hidden');
     showSidebarBtn.classList.add('btn__hidden');
     hideSidebarBtn.classList.remove('btn__hidden');
+    containerWorkouts.classList.remove('workouts--hidden');
   }
 
   _hideSidebar() {
@@ -110,6 +111,7 @@ class App {
     showSidebarBtn.classList.remove('btn__hidden');
     hideSidebarBtn.classList.add('btn__hidden');
     form.classList.add('hidden');
+    containerWorkouts.classList.add('workouts--hidden');
   }
 
   _showForm(mapE) {

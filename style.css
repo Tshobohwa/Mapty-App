@@ -60,6 +60,7 @@ a:visited {
     height: 77vh;
     overflow-y: scroll;
     overflow-x: hidden;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .workouts::-webkit-scrollbar {
@@ -244,10 +245,18 @@ a:visited {
         padding: 0.2rem;
     }
 
+    .logo {
+        position: fixed;
+        top: 1rem;
+        left: 50vw;
+        transform: translateX(-50%);
+    }
+
     .sidebar {
         width: 80vw;
         background-color: var(--color-dark--1);
         padding: 2.5rem;
+        padding-top: 4rem;
         display: flex;
         flex-direction: column;
         transition: width 1s ease-in-out;
@@ -259,7 +268,7 @@ a:visited {
     }
 
     .sidebar--hidden {
-        width: 20rem;
+        width: 10rem;
     }
 
     .side__bar--btn {
@@ -295,6 +304,10 @@ a:visited {
 
     .form {
         height: 22.25rem;
+    }
+
+    .workouts--hidden {
+        opacity: 0;
     }
 
     .btn__text--highlight {
