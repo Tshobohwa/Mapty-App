@@ -243,10 +243,11 @@ a:visited {
 @media only screen and (max-width: 767px) {
     body {
         padding: 0.2rem;
+        position: relative;
     }
 
     .logo {
-        position: fixed;
+        position: absolute;
         top: 1rem;
         left: 50vw;
         transform: translateX(-50%);
